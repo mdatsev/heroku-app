@@ -1,0 +1,10 @@
+<% if(params.has_key?('a') &&
+	params.has_key?('b')) %>
+	<%= "a = #{params['a']}" %>
+	<br/>
+	<%= "b = #{params['b']}" %>
+	<br/>
+	<%= "a + b = #{@sum}" %>
+<%else%>
+	<p> Not enough arguments supplied </p>
+<% end %>
