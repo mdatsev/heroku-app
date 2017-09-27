@@ -1,10 +1,9 @@
-<% if(params.has_key?('a') &&
-	params.has_key?('b')) %>
-	<%= "a = #{params['a']}" %>
+<% if(params.has_key?('a')) %>
+	<%= "#{params['a']}x^2 + #{params['b']} + #{params['c']}" %>
 	<br/>
-	<%= "b = #{params['b']}" %>
+	<%= "x1 = #{@x1}" %>
 	<br/>
-	<%= "a + b = #{@sum}" %>
+	<%= "x2 = #{@x2}" %>
 <%else%>
-	<%= link_to("Not enough arguments supplied.", url_options = {a: 5, b:6}) %>
+	<%= link_to("a can't be 0. example here", url_options = {a: 3, b:10, c: -25}) %>
 <% end %>
