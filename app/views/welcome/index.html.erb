@@ -1,9 +1,4 @@
-<% if(params.has_key?('a')) %>
-	<%= "#{params['a']}x^2 + #{params['b']} + #{params['c']}" %>
-	<br/>
-	<%= "x1 = #{@x1}" %>
-	<br/>
-	<%= "x2 = #{@x2}" %>
-<%else%>
-	<%= link_to("a can't be 0. example here", url_options = {a: 3, b:10, c: -25}) %>
+<%= form_tag({action: :upload}, multipart: true) do %>
+  <%= file_field_tag 'file' %>
+  <%= submit_tag("Upload") %>
 <% end %>

@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "css/table.css" %>
+<table>
+	<% @file.split("\n").each do |line| %>
+		<tr>
+			<% line.split(',').each do |value| %>
+				<td>
+					<%= value %>
+				</td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>
